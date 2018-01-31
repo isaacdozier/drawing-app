@@ -1,5 +1,28 @@
+body{
+    background-color: black;
+}
+
+h1{
+    color: white;
+}
+
+p{
+    color: grey;
+}
+
 #draw{
-    background-color: white
+    background-color: white;
+    height: 320px;
+}
+
+#inner{
+    margin-top: 16px;
+
+}
+
+.draw{
+    max-width: 640px;
+    min-height: 320px;
 }
 
 #btn{
@@ -13,9 +36,14 @@
     overflow:auto;
     height:100%;
 	width: 100%;
+	background-color: black;
 }
 .foot{
 	font-size: 10px;
 	font-weight: lighter;
 	color: #464a4e;
+}
+
+#coor-a {
+    z-index: 99;
 }
