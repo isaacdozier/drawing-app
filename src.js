@@ -1,4 +1,4 @@
-document.getElementById('draw').width  = window.screen.width
+document.getElementById('draw').width  = document.getElementById("inner").offsetWidth
 document.getElementById('draw').height = 320
 
 var offsetX, offsetY, cnt = 0

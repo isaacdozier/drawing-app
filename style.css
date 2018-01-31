@@ -27,7 +27,9 @@ p{
 
 #btn{
     position: absolute;
+    bottom: 0px;
     margin: 8px;
+    z-index: 99;
 }
 
 #Content {
