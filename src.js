@@ -1,4 +1,4 @@
-document.getElementById('draw').width  = document.getElementById("inner").offsetWidth
+document.getElementById('draw').width  = 640
 document.getElementById('draw').height = 320
 
 var offsetX, offsetY, cnt = 0
@@ -14,7 +14,6 @@ function draw(e) {
         offsetX = document.getElementById('draw').offsetLeft  
                 + document.getElementById('inner').offsetLeft
         offsetY = document.getElementById('inner').offsetTop
-        
         
         ctx.lineTo(e.clientX - offsetX,e.clientY - offsetY)
         
