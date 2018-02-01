@@ -1,37 +1,39 @@
 document.getElementById('draw').width  = 640
 document.getElementById('draw').height = 320
 
-var offsetX, offsetY, cnt = 0
-var ink = "#ffffff00"
-var clear = true
+var click, offsetX, offsetY, cnt = 0
 var c = document.getElementById("draw")
 var ctx = c.getContext("2d")
-    ctx.strokeStyle = ink
+    ctx.strokeStyle = "#000000"
+    ctx.fillStyle="white";
+    ctx.fillRect(0,0,640,320);
     
-function draw(e) {
-    if(cnt === 1){
-        
-        offsetX = document.getElementById('draw').offsetLeft  
-                + document.getElementById('inner').offsetLeft
-        offsetY = document.getElementById('inner').offsetTop
-        
-        ctx.lineTo(e.clientX - offsetX,e.clientY - offsetY)
-        
-        document.getElementById('draw').onclick = function(){
-            
-            if(clear === true){
-                ink = "#000000"
-                clear = false
-            } else {
-                ink = "#ffffff00"
-                clear = true
-                
-            }
-            ctx.beginPath();
-            ctx.strokeStyle = ink
-        }
-        ctx.stroke()
-        cnt = 0
+document.getElementById('draw').onmousedown = function(){ 
+    ctx.beginPath()
+    click = true
+}
+
+document.body.onmouseup = function(){
+    click = false
+}  
+
+document.getElementById('clear').onclick = function(){
+    ctx.clearRect(0,0,640,320);
+}
+
+function refresh(e) {
+    if(click){
+        draw(event)
     }
-    cnt++
+}
+
+function draw(e){
+    offsetX = document.getElementById('draw').offsetLeft  
+            + document.getElementById('canvas').offsetLeft
+            
+    offsetY = document.getElementById('canvas').offsetTop
+            - window.pageYOffset
+    
+    ctx.lineTo(e.clientX - offsetX,e.clientY - offsetY)
+    ctx.stroke()
 }

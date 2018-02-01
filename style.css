@@ -4,6 +4,7 @@ body{
 
 h1{
     color: white;
+    margin-top: 16px;
 }
 
 p{
@@ -24,9 +25,9 @@ p{
     min-height: 320px;
 }
 
-#btn{
+#clear{
     position: absolute;
-    bottom: 0px;
+    bottom: 8px;
     margin: 8px;
     z-index: 99;
 }
@@ -47,4 +48,9 @@ p{
 
 #coor-a {
     z-index: 99;
+}
+
+.mini-text{
+    font-size: 12px;
+    font-style: italic;
 }
