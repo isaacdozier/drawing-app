@@ -1,68 +1,65 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <meta name="description" content="Simple Drawing Canvas Web App" />
-	<meta name="author" content="Isaac Dozier">
-	<meta itemprop="name" content="Simple Drawing Web App">
-	<meta itemprop="image" content="/images/icons/icon192.png">
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta id="theme-color" name="theme-color" content="#fff">
-	
-	<base target="_blank">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- Add icon library -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-	<title>Simple Drawing Web App</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-
-</head>
-
-<body>
-	<div id="Content" class="container">
-		<div class="row">
-			<div class="col">
-				<h1>Drawing App</h1>
+	<head>
+	  <!-- Required meta tags -->
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  <meta name="description" content="Simple Drawing Canvas Web App" />
+		<meta name="author" content="Isaac Dozier">
+		<meta itemprop="name" content="Simple Drawing Web App">
+		<meta itemprop="image" content="">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta id="theme-color" name="theme-color" content="#000000">
+		<base target="_blank">
+		<!-- custom styles -->
+		<link rel="stylesheet" type="text/css" href="style.css">
+	  <!-- Bootstrap CSS -->
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	  <!-- Add icon library -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+		
+		<title>Simple Drawing Web App</title>
+	</head>
+	<body>
+		
+		<div id="Content" class="container">
+			<div class="row">
+				<div class="col">
+					<h1>Drawing App</h1>
+				</div>
 			</div>
-		</div>
-		<div id="inner" class="row">
-			<div id="canvas" class="col draw">
-				<button id="clear">Clear</button>
-				<canvas onmousemove="refresh(event)" id="draw"></canvas>
+			
+			<div id="inner" class="row">
+				<div id="tool" class="col"></div>
+				<div id="canvas" class="col draw">
+					<button id="clear">Clear</button>
+					<canvas onmousemove="refresh(event)" id="draw"></canvas>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col">
+					<p><br />
+						 Built by <a href="http://isaacdozier.com">Isaac Dozier</a> <br /> 
+					   Github <a href="https://github.com/isaacdozier/drawing-app">repo</a><br />
+					   <br />
+					   <span class="mini-text">
+					   Works best on Chrome & Firefox<br />
+					   May not work on Internet Explorer
+					   </span>
+					</p>
+				</div>
+			</div>
+			
+			<div class="row foot">
+				<div class="col">
+					<p>v0.2.1-beta</p>
+				</div>
 			</div>
 		</div>
 		
-		<div class="row">
-			<div class="col">
-				<p><br />
-					 Built by <a href="http://isaacdozier.com">Isaac Dozier</a> <br /> 
-				   Github <a href="https://github.com/isaacdozier/drawing-app">repo</a><br />
-				   <br />
-				   <span class="mini-text">
-				   Works best on Chrome & Firefox<br />
-				   May not work on Internet Explorer
-				   </span>
-				</p>
-			</div>
-		</div>
-		
-		<div class="row foot">
-			<div class="col">
-				<p>v0.2.0-beta</p>
-			</div>
-		</div>
-	</div>
-	
 	<script async src="src.js"></script>
-	
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
