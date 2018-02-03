@@ -31,10 +31,18 @@
 			</div>
 			
 			<div id="inner" class="row">
-				<div id="tool" class="col"></div>
-				<div id="canvas" class="col draw">
-					<button id="clear">Clear</button>
+				<div id="color"  class="col-lg-12"></div>
+				<div id="tool"   class="col-lg-12"></div>
+				<div id="canvas" class="col-lg-12 draw">
 					<canvas onmousemove="refresh(event)" id="draw"></canvas>
+					
+					
+				</div>
+				<div class="col-lg-12">
+					<input placeholder=" filename (optional)" type="text" id="fileName" />
+					<a href="#" id="download" title="Download Drawing">
+						<i class="fa fa-download"></i>
+					</a>
 				</div>
 			</div>
 			
@@ -54,7 +62,7 @@
 			
 			<div class="row foot">
 				<div class="col">
-					<p>v0.2.1-beta</p>
+					<p>v1.0.0-beta</p>
 				</div>
 			</div>
 		</div>

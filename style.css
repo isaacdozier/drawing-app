@@ -25,11 +25,9 @@ p{
     min-height: 320px;
 }
 
-#clear{
-    position: absolute;
-    bottom: 8px;
-    margin: 8px;
-    z-index: 99;
+.colors{
+    height: 30px;
+    width: 30px;
 }
 
 #Content {
