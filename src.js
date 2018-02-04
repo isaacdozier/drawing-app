@@ -80,8 +80,7 @@ return tmp
 
 //Build Canvas
 var click, squareStart = false
-var offsetX, offsetY, cnt = 0
-var lastX = 0, lastY = 0
+var X, Y, offsetX, offsetY, cnt = 0
 var c = document.getElementById("draw")
 var ctx = c.getContext("2d")
     ctx.strokeStyle= "black"
@@ -97,13 +96,20 @@ document.getElementById('draw').height = 320
 document.body.onmousedown = function(){ 
     ctx.beginPath()
     click = true
-    lastX = coorX, lastY = coorY
 }
 ////release click -> stop drawing
 document.body.onmouseup = function(){
     click = false
-    lastX = 0, lastY = 0
-}  
+} 
+
+document.body.touchstart = function(){ 
+    ctx.beginPath()
+    click = true
+}
+////release click -> stop drawing
+document.body.touchend = function(){
+    click = false
+} 
 //called from canvas -> onmousemove
 //acts as a refresher based on user activity
 function refresh(e) {
@@ -122,23 +128,22 @@ function draw(e){
     ctx.stroke()
 }
 
-//Draw Square
-function drawSquare(x,y){
-        ctx.strokeRect(lastX,lastY,x,y);
-        squareStart = false
-}
 //Helper Functions`
 function coorX(e){
      //screen and scroll offsets
     offsetX = document.getElementById('draw').offsetLeft  
             + document.getElementById('canvas').offsetLeft
-     return e.clientX - offsetX
+    if(e.clientX){X = e.clientX}
+    return e.clientX - offsetX
 }
 function coorY(e){
     offsetY = document.getElementById('canvas').offsetTop
             - window.pageYOffset
     return e.clientY - offsetY
 }
+
+
+
 function replaceName(name){
     return name.split('-').join('')
 }
