@@ -4,9 +4,9 @@
 	  <!-- Required meta tags -->
 	  <meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	  <meta name="description" content="Simple Drawing Canvas Web App" />
+	  <meta name="description" content="Javascript Paint App" />
 		<meta name="author" content="Isaac Dozier">
-		<meta itemprop="name" content="Simple Drawing Web App">
+		<meta itemprop="name" content="Javascript Paint App">
 		<meta itemprop="image" content="">
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta id="theme-color" name="theme-color" content="#000000">
@@ -19,26 +19,35 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 		
-		<title>Simple Drawing Web App</title>
+		<title>Javascript Paint App</title>
 	</head>
-	<body>
+	<body onload="init()">
 		
 		<div id="Content" class="container">
 			<div class="row">
 				<div class="col">
-					<h1>Drawing App</h1>
+					<h1>Draw</h1>
 				</div>
 			</div>
 			
-			<div id="inner" class="row">
-				<div id="color"  class="col-lg-12"></div>
-				<div id="tool"   class="col-lg-12"></div>
-				<div id="canvas" class="col-lg-12 draw">
-					<canvas onmousemove="refresh(event)" id="draw"></canvas>
-					
-					
+			<div class="row">
+				<div id="colors" class="col-lg-12">
+					<div class="color">Colors: <span id="color"></span></div>
 				</div>
-				<div class="col-lg-12">
+				<div id="canvas" class="col-lg-9 draw">
+					<canvas onmousemove="refresh(event)" id="draw"></canvas>
+				</div>
+				<div class="row col-lg-3 tools">
+					
+					<div class=" col-lg-12">
+						<div id="tool"></div>
+						<div id="details"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-lg-12 file">
 					<input placeholder=" filename (optional)" type="text" id="fileName" />
 					<a href="#" id="download" title="Download Drawing">
 						<i class="fa fa-download"></i>
@@ -47,22 +56,21 @@
 			</div>
 			
 			<div class="row">
-				<div class="col">
+				<div class="col info">
 					<p><br />
 						 Built by <a href="http://isaacdozier.com">Isaac Dozier</a> <br /> 
 					   Github <a href="https://github.com/isaacdozier/drawing-app">repo</a><br />
 					   <br />
 					   <span class="mini-text">
-					   Works best on Chrome & Firefox<br />
-					   May not work on Internet Explorer
+					   Works best on Chrome<br />
 					   </span>
 					</p>
 				</div>
 			</div>
 			
-			<div class="row foot">
-				<div class="col">
-					<p>v1.0.0-beta</p>
+			<div class="row">
+				<div class="col foot">
+					<p>v1.0.1-beta</p>
 				</div>
 			</div>
 		</div>

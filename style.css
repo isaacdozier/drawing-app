@@ -1,51 +1,71 @@
-body{
-    background-color: black;
-}
-
-h1{
+#title{
     color: white;
     margin-top: 16px;
 }
 
-p{
-    color: grey;
+#Content {
+	font-family: Arial, Helvetica, sans-serif;
+    height:100%;
+	width: 100%;
 }
 
 #draw{
-    background-color: white;
+    background-color: black;
+    border: 1px solid #818182;
     height: 320px;
-}
-
-#inner{
-    margin-top: 16px;
-
+    margin-bottom: 16px;
+    
 }
 
 .draw{
     min-height: 320px;
 }
 
+#tool{
+     margin-bottom: 16px;
+}
+
+.file{
+    background-color: #dee2e6;
+    border-top: 2px solid #ced4da;
+    margin: 16px;
+    padding: 16px;
+}
+
+.color{
+    margin-bottom: 16px;
+    
+}
+
 .colors{
     height: 30px;
     width: 30px;
+    margin:2px;
 }
 
-#Content {
-	font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    overflow:auto;
-    height:100%;
-	width: 100%;
-	background-color: black;
+#stability{
+    width: 40px;
 }
+
+body{
+    background-color: white !important;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+p{
+    color: grey;
+}
+
+
 .foot{
 	font-size: 10px;
 	font-weight: lighter;
 	color: #464a4e;
-}
-
-#coor-a {
-    z-index: 99;
 }
 
 .mini-text{
@@ -53,7 +73,7 @@ p{
     font-style: italic;
 }
 
-#tool{
-     margin-bottom: 16px;
-     border-bottom: 2px solid black;
+.btn{
+    background-color:#888888;
+    border-color:#b3b3b3
 }
